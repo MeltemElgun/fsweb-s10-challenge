@@ -4,7 +4,6 @@ import { nanoid } from "nanoid";
 import { useHistory } from "react-router";
 import Gratitude from "./../assets/grForm.png";
 import { notEkle } from "../actions";
-import { s10chLocalStorageKey } from "../reducers";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
@@ -27,7 +26,7 @@ export default function PostForm() {
         .join("|"),
     };
     dispatch(notEkle(yeniNot));
-    dispatch(s10chLocalStorageKey(yeniNot));
+
     // burada ilgili eylemi dispatch edin
     // toast mesajı gösterin
     // sonra aşağıdaki satırı aktifleştirin
